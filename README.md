@@ -5,6 +5,7 @@ API Gateway 호출 로그와 API 기준정보(Registry)를 결합해 **API 자�
 > 기준일(as-of): `2026-10-12` (환경변수 `AS_OF`로 변경 가능)
 
 - 상세 개발 스펙(데이터 양식, API 명세, 탐지 규칙): [`docs/SPEC.md`](docs/SPEC.md)
+- 실데이터 확보 방법과 단계별 로깅 설계: [`docs/DATA_SOURCING.md`](docs/DATA_SOURCING.md)
 - 기획 단계 원본 스펙(Spring Boot 기준 목표 아키텍처): [`API Intelligence Dashboard 개발 스펙.md`](<API Intelligence Dashboard 개발 스펙.md>)
 
 ## 주요 기능
@@ -85,6 +86,7 @@ npm run dev
 log-dashboard/
 ├─ README.md
 ├─ docs/SPEC.md                    # 상세 개발 스펙 (데이터 양식 포함)
+├─ docs/DATA_SOURCING.md           # 실데이터 확보·단계별 로깅 설계
 ├─ API Intelligence Dashboard 개발 스펙.md   # 기획 단계 원본 스펙
 ├─ docker-compose.yml              # db + backend + frontend
 ├─ docker-compose.dev.yml          # backend 8000 포트 노출
