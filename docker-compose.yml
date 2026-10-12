@@ -1,0 +1,23 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment: { POSTGRES_USER: dash, POSTGRES_PASSWORD: dash, POSTGRES_DB: dash }
+    volumes: [dbdata:/var/lib/postgresql/data]
+    healthcheck: { test: ["CMD-SHELL", "pg_isready -U dash"], interval: 3s, retries: 20 }
+  backend:
+    build: ./backend
+    depends_on: { db: { condition: service_healthy } }
+    environment:
+      DATABASE_URL: postgresql://dash:dash@db:5432/dash
+      AS_OF: "2026-10-12"
+    volumes:
+      - ./api_registry.csv:/data/api_registry.csv:ro
+      - ./consumer_system.csv:/data/consumer_system.csv:ro
+      - ./api_daily_stats.csv:/data/api_daily_stats.csv:ro
+      - ./api_call_log.csv:/data/api_call_log.csv:ro
+  frontend:
+    build: ./frontend
+    depends_on: [backend]
+    ports: ["8080:80"]
+volumes:
+  dbdata:

@@ -1,0 +1,13 @@
+﻿consumer_system,consumer_name,consumer_type,owner_org
+EBP,임직원포털,INTERNAL,안전보건팀
+MOCEAN,모바일플랫폼,INTERNAL,설비기술팀
+MES-UI,생산현장단말,INTERNAL,협력사관리팀
+SAP-S4,ERP,INTERNAL,인사정보팀
+PLM-UI,설계포털,INTERNAL,설비기술팀
+QMS-UI,품질포털,INTERNAL,설비기술팀
+BATCH-FIN,재무정산배치,BATCH,생산정보팀
+BATCH-HR,인사마감배치,BATCH,설비기술팀
+PARTNER-P,사외협력사포털,EXTERNAL,안전보건팀
+CDP-PAT,시민개발자앱,CITIZEN,안전보건팀
+DW-ETL,데이터웨어하우스,BATCH,재무정보팀
+BI-TOOL,경영분석도구,INTERNAL,품질정보팀
